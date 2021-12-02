@@ -4,11 +4,9 @@ module.exports = {
     description: 'test blogs',
     themeConfig: {
         nav: [
-          { text: 'Home', link: '/' },
-          { text: 'Guide', link: '/guide/' },
-          { text: 'External', link: 'https://google.com' },
+          { text: 'Home', link: '/' }, 
+          { text: 'Github Pages 教程', link: '/github/GithubPageTutor' },
         ]
       },
-  base:'/blog/',
-
+     base:'/blog/', 
   }

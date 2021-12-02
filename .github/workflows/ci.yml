@@ -10,10 +10,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Build and Deploy
+    - name: Install and Build 🔧 # built using yarn and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      run: |
+        yarn install
+        yarn docs:build
+
+    - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.7
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        # FOLDER: build
-        BUILD_SCRIPT: yarn install && yarn docs:build
+      with:
+          branch: gh-pages # 部署分支
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} 

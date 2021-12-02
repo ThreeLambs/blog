@@ -20,4 +20,4 @@ jobs:
       with:
           branch: gh-pages # 部署分支
           token: ${{ secrets.ACCESS_TOKEN }} 
-          folder: docs\.vuepress\dist
+          folder: docs/.vuepress/dist

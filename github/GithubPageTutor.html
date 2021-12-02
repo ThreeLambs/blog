@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Github Pages | 三只小羊</title>
+    <title>Github Pages + Github Actions + VuePress 创建个人博客 | 三只小羊</title>
     <meta name="generator" content="VuePress 1.8.2">
     
     <meta name="description" content="test blogs">
     
-    <link rel="preload" href="/blog/assets/css/0.styles.b6bfb1ac.css" as="style"><link rel="preload" href="/blog/assets/js/app.44659466.js" as="script"><link rel="preload" href="/blog/assets/js/2.3dbb9245.js" as="script"><link rel="preload" href="/blog/assets/js/8.52189cee.js" as="script"><link rel="prefetch" href="/blog/assets/js/3.9b40af97.js"><link rel="prefetch" href="/blog/assets/js/4.fbcf4621.js"><link rel="prefetch" href="/blog/assets/js/5.ec4b3f90.js"><link rel="prefetch" href="/blog/assets/js/6.27888615.js"><link rel="prefetch" href="/blog/assets/js/7.e23a1d77.js">
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bfb1ac.css" as="style"><link rel="preload" href="/blog/assets/js/app.e0598745.js" as="script"><link rel="preload" href="/blog/assets/js/2.3dbb9245.js" as="script"><link rel="preload" href="/blog/assets/js/8.1e8229c0.js" as="script"><link rel="prefetch" href="/blog/assets/js/3.9b40af97.js"><link rel="prefetch" href="/blog/assets/js/4.fbcf4621.js"><link rel="prefetch" href="/blog/assets/js/5.ec4b3f90.js"><link rel="prefetch" href="/blog/assets/js/6.27888615.js"><link rel="prefetch" href="/blog/assets/js/7.e23a1d77.js">
     <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bfb1ac.css">
   </head>
   <body>
@@ -20,7 +20,7 @@
   Home
 </a></div><div class="nav-item"><a href="/blog/github/GithubPageTutor.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
   Github Pages 教程
-</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="github-pages"><a href="#github-pages" class="header-anchor">#</a> Github Pages</h1> <ol><li><p>新建仓库<code>blog</code></p></li> <li><p>设置GithubPages源</p> <p><code>Settings-&gt;Pages-&gt;Source</code> 选择源和目录，如<code>gh-pages</code> 分支，根目录/root ，<code>Save</code>。 <strong>Theme Chooser</strong>可选。</p> <p>刷新一下就可以看到GithubPages地址了 ：</p> <p>Your site is published at https://threelambs.github.io/blog/</p></li> <li><p>设置<code>Personal access tokens</code>.  注意复制一下，放到Secrets token</p></li> <li><p>添加secrets  <code>Settings-&gt;Secrets-&gt; Actions secrets</code></p> <p>添加token，名称（随意填），如：<code>ACCESS_TOKEN</code>，值：粘贴之前复制的<code>Personal access tokens</code>。</p> <p>使用 格式 <code>secrets.名称</code>  secrets.<code>ACCESS_TOKEN</code></p></li> <li><p>使用<a href="https://vuepress.vuejs.org/zh/" target="_blank" rel="noopener noreferrer">VuePress<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>创建博客，请参考官方文档</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code># package.json
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="github-pages-github-actions-vuepress-创建个人博客"><a href="#github-pages-github-actions-vuepress-创建个人博客" class="header-anchor">#</a> Github Pages + Github Actions + VuePress 创建个人博客</h1> <ol><li><p>新建仓库<code>blog</code></p></li> <li><p>设置GithubPages源</p> <p><code>Settings-&gt;Pages-&gt;Source</code> 选择源和目录，如<code>gh-pages</code> 分支，根目录/root ，<code>Save</code>。 <strong>Theme Chooser</strong>可选。</p> <p>刷新一下就可以看到GithubPages地址了 ：</p> <p>Your site is published at https://threelambs.github.io/blog/</p></li> <li><p>设置<code>Personal access tokens</code>.  注意复制一下，下面要用。</p></li> <li><p>添加secrets  <code>Settings-&gt;Secrets-&gt; Actions secrets</code></p> <p>添加token，名称（随意填），如：<code>ACCESS_TOKEN</code>，值：粘贴之前复制的<code>Personal access tokens</code>。</p> <p>使用 格式 <code>secrets.名称</code>  secrets.<code>ACCESS_TOKEN</code></p></li> <li><p>使用<a href="https://vuepress.vuejs.org/zh/" target="_blank" rel="noopener noreferrer">VuePress<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>创建博客，请参考官方文档</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code># package.json
 {
   &quot;devDependencies&quot;: {
     &quot;vuepress&quot;: &quot;^1.8.2&quot;
@@ -69,6 +69,6 @@ jobs:
           folder: docs/.vuepress/dist  #源目录 （yarn docs:build编译的目标文件夹）
           branch: gh-pages # 部署目标分支
 </code></pre></div><blockquote><p><code>branch: gh-pages</code>  和上面第二步配置对应</p> <p>token: ${{ secrets.<code>ACCESS_TOKEN</code>}}</p></blockquote> <p>提交代码，等待工作流自动编译部署，访问：https://threelambs.github.io/blog/</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/blog/assets/js/app.44659466.js" defer></script><script src="/blog/assets/js/2.3dbb9245.js" defer></script><script src="/blog/assets/js/8.52189cee.js" defer></script>
+    <script src="/blog/assets/js/app.e0598745.js" defer></script><script src="/blog/assets/js/2.3dbb9245.js" defer></script><script src="/blog/assets/js/8.1e8229c0.js" defer></script>
   </body>
 </html>

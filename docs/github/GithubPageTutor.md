@@ -1,5 +1,5 @@
  
-# Github Pages
+# Github Pages + Github Actions + VuePress 创建个人博客
 
 1. 新建仓库``blog``
 
@@ -11,7 +11,7 @@
 
     Your site is published at https://threelambs.github.io/blog/
 
-3. 设置`Personal access tokens`.  注意复制一下，放到Secrets token
+3. 设置`Personal access tokens`.  注意复制一下，下面要用。
 
 4. 添加secrets  `Settings->Secrets-> Actions secrets ` 
 

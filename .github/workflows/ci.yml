@@ -8,18 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2  #使用此action签出当前仓库代码
         with:
           persist-credentials: false
 
-      - name: Install and Build 🔧 # built using yarn and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      - name: Install and Build 🔧 # 使用yarn安装依赖&编译 （命令参考VuePress文档）
         run: |
           yarn install
           yarn docs:build
   
-      - name: Deploy
+      - name: Deploy    #部署到gh-pages分支
         uses: JamesIves/github-pages-deploy-action@4.1.7
-        with:
-          branch: gh-pages # 部署分支
+        with: 
           token: ${{ secrets.ACCESS_TOKEN }} 
-          folder: public
+          folder: docs/.vuepress/dist  #源目录 （yarn docs:build编译的目标文件夹）
+          branch: gh-pages # 部署目标分支

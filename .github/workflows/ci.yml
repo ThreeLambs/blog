@@ -12,7 +12,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install and Build 🔧 # 使用yarn安装依赖&编译 （命令参考VuePress文档）
+      - name: Install and Build 🔧 # 使用yarn安装依赖&编译 
         run: |
           yarn install
           yarn build
